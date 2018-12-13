@@ -327,7 +327,7 @@
 	</div>
 </body>
 </html>
-
+<script type="text/javascript" src="../js/ajax1804.js" ></script>
 <script type="text/javascript" src="../js/show.js"></script>
 <script type="text/javascript" src="../js/promList.js"></script>
 <script type="text/javascript" src="../js/promListSe.js"></script>
@@ -356,6 +356,7 @@ document.onscroll = function(){
 	}
 }
 
+
 /*var aside = $("#gotoTop");
 var topAsid = aside.offsetTop;
 // var leftDis = nav.offsetLeft;
@@ -372,13 +373,27 @@ document.onscroll = function(){
 
 window.onload = function(){
 
+	let xhr = new XMLHttpRequest();
+	let imgs;
+	
+	xhr.open("get","../php/sliderDate.php",true);
+	
+	xhr.onreadystatechange = function(){
+		if(xhr.readyState==4 && xhr.status==200){
+			// console.log(xhr.responseText);
+			imgs = xhr.responseText;
+			console.log(imgs);			
+		}
+	}	
+	xhr.send();
 
+	
 
 	let s1 = new Slider({
 		"boxDom":$("#mainSlider"),
 		"width":1263,
 		"height":350,
-		"imgs":["../img/3b46f3bca80d465b3af4a696ccd7d3ca.jpg","../img/6ef010fc3149ea9de7df4e2577ebe2e4.jpg","../img/7c96de783cf53d64bdb1b438f2f162b0.jpg","../img/acba8899f8a706e01f3776108da31f77.jpg","../img/b7f843179c8e4bb45ec04d6d7c676134.jpg","../img/d8e0ec4201fc25e9bfa7a42dab72c731.jpg","../img/d226887b4264047253aa51c7f4530aaf.jpg","../img/fdbce8eb245578c97214fdd366ed74d5.jpg"],
+		"imgs":["../img/3b46f3bca80d465b3af4a696ccd7d3ca.jpg","../img/6ef010fc3149ea9de7df4e2577ebe2e4.jpg","../img/7c96de783cf53d64bdb1b438f2f162b0.jpg","../img/acba8899f8a706e01f3776108da31f77.jpg","../img/d226887b4264047253aa51c7f4530aaf.jpg","../img/fdbce8eb245578c97214fdd366ed74d5.jpg"],
 		"btnColor":"black",
 		"btnOpacity":.4,
 		"btnHighColor":"#d70057",

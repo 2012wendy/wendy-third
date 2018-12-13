@@ -41,10 +41,10 @@
 
 <!-- 用户名登录 -->
 				<div class="bodyUser loginShow">
-					<form action="" class="loginForm">
-						<input type="text" placeholder="已验证手机/邮箱/用户名"/>
-						<input type="text" placeholder="密码">
-						<input type="button" value = "登录">
+					<form action="../php/logincheck.php" method="post" class="loginForm">
+						<input type="text" placeholder="已验证手机/邮箱/用户名" name="vipId"/>
+						<input type="password" placeholder="密码" name="vipPass"/>
+						<input type="submit" value = "登录">
 					</form>
 					<a href="">忘记密码?</a>
 				</div>
@@ -86,7 +86,7 @@
 						<i></i>
 					</a>
 				</div>
-				<a id="regSupr" href="">
+				<a id="regSupr" href="reg.html">
 					<i></i>
 					注册有惊喜
 				</a>

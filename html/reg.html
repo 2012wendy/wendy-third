@@ -34,17 +34,17 @@
 		</a>
 		<div class="register">
 			<span class="reg">欢迎注册</span>
-			<a class="logn" href="">登录</a>		
-			<form action="" class="regForm">
-				<input type="text" placeholder="请输入手机号"/>
+			<a class="logn" href="http://localhost/okbuy/html/login.html">登录</a>		
+			<form action="../php/addUser01.php" method="post" class="regForm">
+				<input type="text" placeholder="请输入手机号" name = "phoneNumber"/>
 				<div class="password">
-					<input type="password" placeholder="请设置密码"/>
+					<input type="password" placeholder="请设置密码" name="passWord"/>
 					<span class="show"></span>
 				</div>
 				
 				<input type="text" placeholder="图形验证码"/>
-				<img id="checkimg" src="../img/pwicon.png" alt=""/>
-				<input id="btn" type="button" value="注册">
+				<span id="checkimg">请点击</span>
+				<input id="btn" type="submit" value="注册">
 			</form>
 			<p class="regAgree">注册即视为同意
 				<a href="">好乐买隐私协议</a>
@@ -57,3 +57,26 @@
 	</div>
 </body>
 </html>
+<script type="text/javascript">
+	window.onload = function(){
+		let checkCode = document.getElementById("checkimg");
+		checkCode.onclick = function(){
+			var str = '';
+			for(var i=0; i<10; i++){
+				var a = String.fromCharCode(random(48,57))   //数字
+				var b = String.fromCharCode(random(65,90))   //大写字母
+				var c = String.fromCharCode(random(97,122))   //小写字母
+				str += a + b + c;
+			}
+			var yzm = '';
+			for(var j = 0; j < 4; j++){
+				var index = parseInt(Math.random() * str.length);
+				yzm = yzm + str[index];
+			}
+			checkCode.innerHTML = yzm;
+		}
+		function random(min,max){
+			return Math.floor(Math.random()*(max-min+1)+min);
+		}
+	}
+</script>
