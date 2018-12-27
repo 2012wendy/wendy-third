@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script type="text/javascript">
+
+let singleton = (function(){
+	function Map(width,height) {
+		this.width = width;
+		this.height =height;
+	}
+	let instance;
+	return {
+		"getInstance":function(width,height){
+			if(instance==undefined){
+				instance = new Map(width,height);
+			}else{
+				instance.width = width;
+				instance.height =height;
+			}
+			return instance;
+		}
+	}
+})();
+
+let m1 = singleton.getInstance(100,200);
+let m2 = singleton.getInstance(300,400);
+
+
+console.log(m1.width,m1.height);
+console.log(m2.width,m2.height);
+
+</script>

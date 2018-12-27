@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{ padding:0; margin:0}
+			ul{ list-style:none}
+			a{ text-decoration:none; display:block; width:200px; height:50px;}
+			.one{ width:1000px; height:50px; line-height:50px; background:#ff0; margin:0 auto;}
+			.oneli{ float:left; width:200px; height:50px; text-align:center; position:relative;}
+			.oneli a:hover{ background:#0ff;}
+			/*二级菜单*/
+			.two{ width:200px; background:#96F; position:absolute; display:none; }
+			
+			.oneli:hover .two{ display:block;}
+			
+			.twoli a:hover{ background:#90F}
+			.twoli{ position:relative;}
+			/*三级菜单*/
+			.three{ width:200px; background:#FF9; position:absolute; top:0px; left:200px; display:none;}
+			.twoli:hover .three{ display:block;}
+			.threeli a:hover{ background:#FC0}
+			/*最后一个的三级菜单*/
+			.last .three{ width:200px; background:#FF9; position:absolute; top:0px; left:-200px; display:none;}
+			.last .twoli:hover .three{ display:block;}
+			.last .threeli a:hover{ background:#FC0}
+			
+			</style>
+	</head>
+	<body>
+		<ul id="box" class="one">
+			<li class="oneli">
+				<a href="#">一级菜单1</a>
+				<ul class="two">
+					<li class="twoli">
+						<a href="#">二级菜单11</a>
+						<ul class="three">
+							<li class="threeli">
+								<a href="http://www.baidu.com">进入百度一下</a>
+								
+							</li>
+							<li class="threeli">
+								<a href="#">三级菜单112</a>
+							</li>
+							<li class="threeli">
+								<a href="#">三级菜单113</a>
+							</li>
+						</ul>
+					</li>
+					<li class="twoli">
+						<a href="#">二级菜单12</a>						
+					</li>
+					<li class="twoli">
+						<a href="#">二级菜单13</a>
+					</li>
+				</ul>
+			</li>
+			<li class="oneli">
+				<a href="#">一级菜单2</a>
+				<ul class="two">
+					<li class="twoli">
+						<a href="#">二级菜单21</a>
+					</li>
+					<li class="twoli">
+						<a href="#">二级菜单22</a>
+					</li>
+					<li class="twoli">
+						<a href="#">二级菜单23</a>
+					</li>
+				</ul>
+			</li>
+			<li class="oneli">
+				<a href="#">一级菜单3</a>
+				<ul class="two">
+					<li class="twoli">
+						<a href="#">二级菜单31</a>
+					</li>
+					<li class="twoli">
+						<a href="#">二级菜单32</a>
+					</li>
+					<li class="twoli">
+						<a href="#">二级菜单33</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</body>
+</html>
+<script type="text/javascript">
+
+</script>
+   

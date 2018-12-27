@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding: 0;
+			}
+		</style>
+	</head>
+	<body>
+	</body>
+</html>
+<script type="text/javascript" src="js/tools.js"></script>
+<script type="text/javascript" src="js/Map.js"></script>
+<script type="text/javascript" src="js/MoveObj.js"></script>
+<script type="text/javascript" src="js/MyPlane.js"></script>
+<script type="text/javascript" src="js/bullet.js"></script>
+<script type="text/javascript" src="js/EnemyPlane.js"></script>
+
+<script type="text/javascript">
+
+//二、流程
+window.onload=function(){
+	//1、创建地图
+	let m = mapSingleton.getInstance(480,600,"img/bg.jpg");
+	
+	//2、创建我方战机
+	let myplane = new MyPlane({
+		map : m,
+		width : 98,
+		height : 122,
+		imgUrl : "img/me.png",
+
+		left1 : (480-98)/2,
+		top1 : 600-122,
+
+		leftInc : 0,
+		topInc : 36,
+		leftDirection : 0,
+		topDirection :1,
+		timeSpace : 500,
+
+		hp:100
+	});
+	myplane.addEvent();
+	
+	myplane.shoot();
+	
+	//敌机
+	setInterval(function(){
+		let left1 = parseInt(Math.random()*(m.width-59));
+		let e = new EnemyPlane({
+			map : m,
+			width : 59,
+			height : 36,
+			imgUrl : "img/plane1.png",
+
+			left1 : left1,//??
+			top1 : -36,
+			leftInc : 0,
+			topInc : 36,
+			leftDirection : 0,
+			topDirection :1,
+			timeSpace : 1000,
+			boomImgs:["img/plain1_die1.png","img/plain1_die2.png","img/plain1_die3.png"],
+			score:10
+		});
+		e.go();
+
+		m.enemyPlanes.push(e);
+
+	},1000);
+
+}
+
+</script>

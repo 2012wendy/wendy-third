@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{ padding:0; margin:0}
+			ul{ list-style:none}
+			a{ text-decoration:none; display:block; width:200px; height:50px;}
+			.one{ width:1000px; height:50px; line-height:50px; background:#ff0; margin:0 auto;}
+			.oneli{ float:left; width:200px; height:50px; text-align:center; position:relative;}
+			.oneli a:hover{ background:#0ff;}
+			/*二级菜单*/
+			.two{ width:200px; background:#96F; position:absolute; display:none; }
+			
+			.oneli:hover .two{ display:block;}
+			
+			.twoli a:hover{ background:#90F}
+			.twoli{ position:relative;}
+			/*三级菜单*/
+			.three{ width:200px; background:#FF9; position:absolute; top:0px; left:200px; display:none;}
+			.twoli:hover .three{ display:block;}
+			.threeli a:hover{ background:#FC0}
+			/*最后一个的三级菜单*/
+			.last .three{ width:200px; background:#FF9; position:absolute; top:0px; left:-200px; display:none;}
+			.last .twoli:hover .three{ display:block;}
+			.last .threeli a:hover{ background:#FC0}
+			
+			</style>
+	</head>
+	<body>
+		
+	</body>
+</html>
+<script type="text/javascript">
+
+
+//定义一个类：菜单项类(相当于dom节点)
+
+function MenuItem(obj) {
+	this.domObj = null;
+
+	this.className = obj.className;//代替了width，height等等
+	this.title = obj.title;//菜单上的文字
+	this.href =  obj.href;
+	
+	this.children = [];//dom的孩子
+	this.ulClass =  obj.ulClass;//子菜单容器的class
+}
+
+MenuItem.prototype.appendChild = function(menuItemObj){
+	this.children.push(menuItemObj);
+}
+
+
+MenuItem.prototype.removeChild = function(menuItemObj){
+	let index = this.children.indexOf(menuItemObj);
+	this.children.splice(index,1);
+}
+
+MenuItem.prototype.createUI = function(ulDom) {
+	//1、创建自身的li
+	this.domObj = document.createElement("li");
+	this.domObj.className = this.className;	
+	let aDom = document.createElement("a");
+	aDom.href = this.href;
+	aDom.innerHTML = this.title;
+	this.domObj.appendChild(aDom);
+
+	//把this.domObj放入ul里
+	ulDom.appendChild(this.domObj);
+
+	if(this.children.length>0){
+		//2、创建子节点
+		//1)、创建子节点的容器
+		let ulDom = document.createElement("ul");
+		ulDom.className = this.ulClass;
+		this.domObj.appendChild(ulDom);
+
+		for(let i in this.children){
+			this.children[i].createUI(ulDom);
+		}
+	}
+};
+
+function RootMenu(obj){
+	this.children = [];//dom的孩子
+	this.ulClass =  obj.ulClass;//子菜单容器的class
+}
+
+RootMenu.prototype.appendChild = function(menuItemObj){
+	this.children.push(menuItemObj);
+}
+
+RootMenu.prototype.createUI = function(boxDom){
+	if(this.children.length>0){
+		//2、创建子节点
+		//1)、创建子节点的容器
+		let ulDom = document.createElement("ul");
+		ulDom.className = this.ulClass;
+		boxDom.appendChild(ulDom);
+		for(let i in this.children){
+			this.children[i].createUI(ulDom);
+		}
+	}
+}
+
+window.onload = function(){
+
+	//1、创建根菜单(只是个容器)
+	let rootMenu =new RootMenu({ulClass:"one"});
+
+	let m1 = new MenuItem({
+		"className":"oneli",
+		"title":'一级菜单1',
+		"href":"#",
+		"ulClass":"two"
+	});
+	rootMenu.appendChild(m1);
+
+	let m2 = new MenuItem({
+		"className":"oneli",
+		"title":'一级菜单2',
+		"href":"#",
+		"ulClass":"two"
+	});
+	rootMenu.appendChild(m2);
+
+	let m1_1 =new MenuItem({
+		"className":"twoli",
+		"title":'二级菜单11',
+		"href":"#",
+		"ulClass":"three"
+	});
+
+	let m1_2 =new MenuItem({
+		"className":"twoli",
+		"title":'二级菜单12',
+		"href":"#",
+		"ulClass":""
+	});
+
+	let m1_3 =new MenuItem({
+		"className":"twoli",
+		"title":'二级菜单13',
+		"href":"#",
+		"ulClass":""
+	});
+
+	m1.appendChild(m1_1);
+	m1.appendChild(m1_2);
+	m1.appendChild(m1_3);
+
+	let m1_1_1 = new MenuItem({
+		"className":"threeli",
+		"title":'百度一下',
+		"href":"http://www.baidu.com",
+		"ulClass":""
+	});
+	m1_1.appendChild(m1_1_1);
+
+	let m1_1_2= new MenuItem({
+		"className":"threeli",
+		"title":'三级菜单112',
+		"href":"#",
+		"ulClass":""
+	});
+	m1_1.appendChild(m1_1_2);
+
+	let m1_1_3= new MenuItem({
+		"className":"threeli",
+		"title":'三级菜单113',
+		"href":"#",
+		"ulClass":""
+	});
+	m1_1.appendChild(m1_1_3);
+
+
+	rootMenu.createUI(document.body);
+
+}
+
+function $(str){//#box .cls  p
+	if(str.charAt(0)=="#"){
+		return document.getElementById(str.substring(1));
+	}else if(str.charAt(0)=="."){
+		return document.getElementsByClassName(str.substring(1));
+	}else{
+		return document.getElementsByTagName(str);
+	}
+}	
+
+</script>
+   
