@@ -1,0 +1,53 @@
+
+/*中部广告*/
+.brand{
+	height:315px;
+	width:100%;
+	background:#f5f5f5;
+}
+.brand p{
+	margin:0 auto;
+}
+.brand .brandList{
+	width:1200px;
+	height:194px;
+	margin:0 auto;
+	background:#f5f5f5;			
+}
+.brand .brandList a{
+	width:99px;
+	height:57px;
+	background:white;
+	display:block;
+	float:left;
+	margin-left:1px;
+	margin-bottom:1px;
+	text-align:center;
+	padding-top:7px;
+}
+.brand .brandList a:last-child{
+	padding-top:0;
+}
+/*中部banner*/
+.bannerMid img{
+	display:block;
+	margin:0 auto;
+}
+/*倒计时广告*/
+.promList{
+	width:1200px;
+	margin:0 auto;
+	padding-top:30px;
+}
+.promList #promUl  li:hover   a{
+	border:1px solid #d70057;
+}
+/*secondBanner*/
+.secondBanner  img{
+	display:block;
+	margin:0 auto;
+}
+/*second倒计时广告*/
+.se{
+	padding-top:0;
+}

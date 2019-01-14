@@ -1,0 +1,146 @@
+body,p,dl,dd,ul,ol,li,div,h1,h2,h3,h4,h5,h6,form,input,table,tr,td{
+				margin:0;
+				padding:0;
+		}
+
+
+		body{
+		    font-family:"微软雅黑"，Arial;
+		}
+
+
+		ul,ol{
+		    list-style:none;
+		}
+
+		img{
+		    border:0;
+		}
+
+		a{
+		    text-decoration:none;
+		}
+
+		body,html{
+			height:100%;
+		}
+/*header部分*/
+		.header{
+			width:1200px;
+			margin:0 auto;
+			overflow:hidden;
+		}
+		.header .headerLeft{
+			float:left;
+		}
+		.header .headerRight{
+			float:right;
+			height:100px;
+			line-height:100px;
+			font-size:14px;
+			font-family:'Microsoft Yahei';
+			color:#666;
+		}
+		.header span{
+			padding-left:60px;
+		}
+		.header span i{
+			background:url(../img/ui_login.png) -76px -60px no-repeat;
+			display:inline-block;
+			width:16px;
+			height:16px;
+			vertical-align:middle;
+			padding-right:5px;
+		}
+/*middle部分*/
+		.middle{
+			position:relative;
+			width:1263px;
+			overflow:hidden;
+		}
+		.middle #bg{
+			position:relative;
+			left:-360px;			
+		}
+		.register{
+			position:absolute;
+			right:30px;
+			top:20px;
+			width:340px;
+			height:520px;
+			background:white;
+			padding:0 30px;			
+		}
+		.register .reg{
+			font-size:22px;
+			font-weight:bold;
+			color:black;
+			padding:30px 0;
+			display:inline-block;
+		}
+		.register .logn{
+			float:right;
+			font-size:16px;
+			display:inline-block;
+			padding:34px 0;
+			color:#d70057;
+		}
+		.regForm input{
+			height:46px;
+			width:329px;
+			font-size:14px;
+			background:white;
+			line-height:46px;
+			text-indent:14px;
+			margin-bottom:33px;
+
+		}
+		.regForm input:nth-child(3){
+			width:174px;
+		}
+		.regForm .password{
+			position:relative;
+		}
+		.regForm #checkimg{
+			width:100px;
+			height:36px;
+			cursor:pointer;
+			display:inline-block;
+			vertical-align: middle;
+			text-align: center;
+
+		}
+		.password .show{
+			background:url(../img/pwicon.png) no-repeat;
+			position:absolute;
+			right:15px;
+			top:6px;
+			width:20px;
+			height:38px;
+		}
+		.regForm #btn{
+			width:331px;
+			background:#d70057;
+			border:none;
+			cursor:pointer;
+			margin:0 0 10px;
+			font-size:18px;
+			font-weight:bold;
+			color:white;
+		}
+		.register p{
+			font-size:12px;
+			color:#999;
+		}
+		.regAgree a{
+			color:#d70057;
+		}
+/*footer部分*/
+		.footer{
+			height:28px;
+			margin:80px auto 10px;
+			text-align:center;
+			color:#999;
+			font-size:12px;
+			line-height:28px;
+		}

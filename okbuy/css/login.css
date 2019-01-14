@@ -1,0 +1,328 @@
+body,
+p,
+dl,
+dd,
+ul,
+ol,
+li,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+input,
+table,
+tr,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "微软雅黑"，Arial;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+img {
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+
+/*header部分*/
+
+.header {
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.header .headerLeft {
+    float: left;
+}
+
+.header .headerRight {
+    float: right;
+    height: 100px;
+    line-height: 100px;
+    font-size: 14px;
+    font-family: 'Microsoft Yahei';
+    color: #666;
+}
+
+.header span {
+    padding-left: 60px;
+}
+
+.header span i {
+    background: url(../img/ui_login.png) -76px -60px no-repeat;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    padding-right: 5px;
+}
+
+
+/*middle部分*/
+
+.middle {
+    position: relative;
+    width: 1263px;
+    overflow: hidden;
+}
+
+.middle #bg {
+    position: relative;
+    left: -360px;
+}
+
+.register {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    width: 340px;
+    height: 520px;
+    background: white;
+    padding: 0 30px;
+}
+
+.register .loginHead {
+    width: 340px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+}
+
+.loginHead span {
+    display: inline-block;
+    width: 166px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.loginHead .codeLogin {
+    color: #d70057;
+    border-left: 1px solid #e0e0e0;
+}
+
+.bodyUser {
+    display: none;
+}
+
+.scanCode {
+    padding: 28px 0;
+    position: relative;
+}
+
+.scanCode .moveCode {
+    display: block;
+    width: 180px;
+    height: 180px;
+    transition: all .3s linear;
+    /* margin: 0 auto; */
+    margin-left: 80px;
+}
+
+.scanCode:hover .moveCode {
+    /* margin: 0 0; */
+    margin-left: 0;
+}
+
+.scanCode .hideImg {
+    /* display: none; */
+    position: absolute;
+    top: 28px;
+    right: 0;
+    opacity: 0;
+    transition: all .5s linear;
+    height: 180px;
+}
+
+.scanCode:hover .hideImg {
+    /* margin: 0 0; */
+    opacity: 1;
+}
+
+.bodyCode .commend {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-top: 20px;
+}
+
+.bodyCode .codeDown {
+    font-size: 14px;
+    text-align: center;
+    padding: 10px 0;
+    cursor: pointer;
+    color: #666;
+    position: relative;
+}
+
+.codeDown .down i {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+    vertical-align: middle;
+    background: url(../img/ui_login.png) -52px -58px no-repeat;
+}
+
+.codeDown .hideCode {
+    display: none;
+    z-index: 3;
+    position: absolute;
+    left: 90px;
+    top: 40px;
+    width: 158px;
+    height: 140px;
+    padding-top: 15px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #f6f6f6;
+}
+
+.hideCode .downAfter {
+    z-index: 3;
+    position: absolute;
+    left: 70px;
+    top: -15px;
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border: 8px solid transparent;
+    border-bottom: 8px solid grey;
+}
+
+.bodyCode .codeDown:hover .hideCode {
+    display: block;
+}
+
+.hideCode img {
+    width: 126px;
+    height: 126px;
+}
+
+.loginFooter {
+    position: absolute;
+    left: 0px;
+    bottom: 0;
+    background: #f6f6f6;
+    width: 360px;
+    padding: 16px 30px 16px 10px;
+    overflow: hidden;
+}
+
+
+/* 账号登录 */
+.bodyUser{
+
+}
+.loginForm input{
+    width:340px;
+    height:48px;
+    margin:14px 0;
+    text-indent: 10px;
+    color:gray;
+    border:1px solid gainsboro;
+    font-size:14px;
+}
+.loginForm #loginBtn{
+    background:#d70057;
+    border:none;
+    width:344px;
+    font-weight: bold;
+    color:white;
+    font-size:18px;
+}
+.bodyUser a{
+    font-size:12px;
+    color:gray;
+    line-height:12px;
+    padding-left:275px;
+    /* display:block; */
+
+}
+.loginFooter .ways {
+    float: left;
+}
+
+.ways a {
+    padding: 0 10px;
+    border-right: 1px solid #e0e0e0;
+}
+
+.ways a i {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+}
+
+.ways a:first-child i {
+    background: url(../img/ui_login.png) -23px -58px no-repeat;
+}
+
+.ways a:nth-child(2) i {
+    background: url(../img/ui_login.png) -5px -42px no-repeat;
+}
+
+.ways a:nth-child(3) i {
+    background: url(../img/ui_login.png) -5px -76px no-repeat;
+}
+
+.ways a:nth-child(4) i {
+    background: url(../img/ui_login.png) -53px -30px no-repeat;
+}
+
+.ways a:nth-child(5) i {
+    background: url(../img/ui_login.png) -23px -30px no-repeat;
+}
+
+.loginFooter #regSupr {
+    float: right;
+    color: #666;
+    font-size: 14px;
+}
+
+.loginFooter #regSupr i {
+    background: url(../img/ui_login.png) -76px -30px no-repeat;
+    display: inline-block;
+    width: 16px;
+    height: 17px;
+    vertical-align: bottom;
+    padding-right: 5px;
+}
+
+
+/*footer部分*/
+
+.footer {
+    height: 28px;
+    margin: 80px auto 10px;
+    text-align: center;
+    color: #999;
+    font-size: 12px;
+    line-height: 28px;
+}

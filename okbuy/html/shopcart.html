@@ -1,0 +1,1072 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <!-- <link rel="icon" href="img/favicon.ico"> -->
+    <link rel="styleSheet" href="../css/commen.css" type="text/css" />
+    <link rel="styleSheet" href="../css/shopCart.css" type="text/css" />
+</head>
+
+<body>
+    <!-- 顶层广告 -->
+    <div id="topIdBox" width="100%" overflow="hidden">
+        <a href="#" id="topAd"></a>
+    </div>
+    <!-- 头部登录区 -->
+    <div class="header">
+        <div class="top">
+            <div class="titleInfo">
+                <span id="unlogin">
+					<a href="login.html">登录</a>
+					<i>|</i>
+					<a href="reg.html">注册</a>					
+                </span>
+                <span id="alreadylogin">
+                    <a href=""></a>
+                    <i>|</i>
+                    <a href="login.html">注销</a>
+                </span>
+                <ul id="topInf">
+                    <li>
+                        <a href="#">我的好乐买</a>
+                        <span class="arrowTop"></span>
+                        <div class="myList">
+                            <p> 
+                                <a href="">我的好乐买</a>
+                            </p>
+                            <p>
+                                <a href="">我的订单</a>
+                            </p>
+                            <p>
+                                <a href="">我的收藏</a>
+                            </p>
+                            <p>
+                                <a href="">我的优惠券</a> 
+                            </p>
+                        </div>
+                    </li>
+                    
+                    <i>|</i>
+                    <li>
+                        <a href="#">手机好乐买</a>
+                        <span class="arrowTop"></span>
+                        <div class="myList">
+                            <p>
+                                <a href="">手机好乐买</a>
+                            </p>
+                            <p  class="centerP">
+                                <img src="../img/appqcode_2.png" alt="">
+                            </p>                            
+                            <p class="centerP">
+                                <a href="">关注客户端</a>
+                            </p>
+                        </div>
+                    </li>
+
+                    <i>|</i>
+                    <li>
+                        <a href="#">关注好乐买</a>
+                        <span class="arrowTop"></span>
+                        <div class="myList">
+                            <p>
+                                <a href="">关注好乐买</a>
+                            </p>
+                            <p class="centerP">
+                                <img src="../img/weixinqcode.png" alt="">
+                            </p>                            
+                            <p class="centerP"> 
+                                <a href="">微信客户端</a>
+                            </p>
+                        </div>
+                    </li>
+                    <i>|</i>
+                    <li>
+                        <a href="#">客户服务</a>
+                        <span class="arrowTop"></span>
+                        <div class="myList">
+                            <p>
+                                <a href="">客户服务</a>
+                            </p>
+                            <p>
+                                <a href="">联系客服</a>
+                            </p>
+                            <p>
+                                <a href="">帮助中心</a>
+                            </p>
+                            <p>
+                                <a href="">意见建议</a> 
+                            </p>
+                        </div>
+                    </li>
+                    <i>|</i>
+                    <li >
+                        <a href="#">公告</a>
+                        <span class="arrowTop"></span> 
+                        <div class="myList" id="attention">
+                                <p>
+                                    <a href="">关于填写订单收件人信息的温馨提示</a>
+                                </p>
+                                <p>
+                                    <a href="">关于国庆期间客户服务调整的公告</a>
+                                </p>
+                                <p>
+                                    <a href="">好乐买运费标准调整公告</a>
+                                </p>
+                                <p>
+                                    <a href="">常见问题FAQ</a> 
+                                </p>
+                        </div>                       
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- 头部搜索部分 -->
+        <div class="search">
+            <span class="logo">
+				<a href="index.html"><img src="../img/logo.png" alt=""/></a>
+			</span>
+            <form action="" class="searchForm" name="topSearchForm">
+                <input type="text" class="searchTxt" placeholder="秋冬季新品" /><input type="button" class="searchBtn" value="" />
+            </form>
+            <span class="hotWord">
+				<a href="">卫衣</a>
+				<a href="">卫衣</a>
+				<a href="">卫衣</a>
+				<a href="">卫衣</a>
+				<a href="">卫衣</a>
+				<a href="">卫衣</a>
+				<a href="">卫衣</a>			
+			</span>
+            <a href="shopcart.html" class="shopCart">
+                <span>
+					去购物车结算
+					<b>(0)</b>
+				</span>
+            </a>
+        </div>
+        <!-- 头部导航 -->
+        <div class="nav" id="nav">
+            <ul class="navList">
+                <li>
+                    <a href="goodlist.html" class="first">首页</a>
+                </li>
+                <li>
+                    <a href="#" class="otls"></a>
+                </li>
+                <li class="hasSub">
+                    <a href="#" calss="navSport">运动生活</a>
+                </li>                
+                <li class="hasSub">
+                    <a href="#" class="navLei">休闲服饰</a>
+                </li>
+                <li class="hasSub">
+                    <a href="#" class="navShoes">男女名鞋</a>
+                </li>
+                <li class="hasSub">
+                    <a href="#" class="navGloab"><img src="../img/7de29d4226bbf3855eb7eca34a680cc5.gif" alt="" /> 全球购
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="navBag">家居包配</a>
+                </li>
+            </ul>
+            <div style="clear: both;"></div>
+            <!-- 运动生活 -->
+            <div class="navSub jsSport">
+                <div class="Mark"></div>
+                <div class="mainBox">
+                    <div class="columCon">
+                        <h3>品类导购</h3>
+                        <div class="cateWrap">
+                            <h3 class="black">运动鞋</h3>
+                            <p class="context">
+                                <a href="">跑步鞋</a>
+                                <a href="">休闲鞋</a>
+                                <a href="">复古鞋</a>
+                                <a href="">帆布鞋</a>
+                                <a href="">帆布鞋</a>
+                                <a href="">跑步鞋</a>
+                                <a href="">休闲鞋</a>
+                                <a href="">复古鞋</a>
+                                <a href="">帆布鞋</a>
+                                <a href="">帆布鞋</a>
+                                <a href="">跑步鞋</a>
+                                <a href="">休闲鞋</a>
+                                <a href="">复古鞋</a>
+                                <a href="">帆布鞋</a>
+                            </p>
+                        </div>
+                        <div class="cateWrap">
+                            <h3 class="black">运动服</h3>
+                            <p class="context">
+                                <a href="">夹克/外套</a>
+                                <a href="">卫衣</a>
+                                <a href="">棉服</a>
+                                <a href="">羽绒服</a>
+                                <a href="">长裤</a>
+                                <a href="">夹克/外套</a>
+                                <a href="">卫衣</a>
+                                <a href="">棉服</a>
+                                <a href="">羽绒服</a>
+                                <a href="">长裤</a>
+                                <a href="">夹克/外套</a>
+                                <a href="">卫衣</a>
+                                <a href="">棉服</a>
+                                <a href="">羽绒服</a>
+                                <a href="">长裤</a>
+                            </p>
+                        </div>
+                        <div class="cateWrap">
+                            <h3 class="black">儿童专区</h3>
+                            <p class="context">
+                                <a href="">运动鞋</a>
+                                <a href="">休闲鞋</a>
+                                <a href="">篮球鞋</a>
+                                <a href="">童鞋</a>
+                                <a href="">童装</a>
+                                <a href="">童鞋</a>
+                                <a href="">童装</a>
+                            </p>
+                        </div>
+                        <div class="cateWrap">
+                            <h3 class="black">运动周边</h3>
+                            <p class="context">
+                                <a href="">袜子</a>
+                                <a href="">帽子</a>
+                                <a href="">护具</a>
+                                <a href="">球类</a>
+                                <a href="">泳具</a>
+                                <a href="">球拍</a>
+                                <a href="">运动休闲包</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="columCon">
+                        <h3>运动导购</h3>
+                        <div class="cateWrap">
+                            <h3 class="black">冬装换新</h3>
+                            <p class="context">
+                                <a href="">羽绒服</a>
+                                <a href="">内搭卫衣</a>
+                                <a href="">收腿运动裤</a>
+                                <a href="">贝壳头</a>
+                                <a href="">小椰子</a>
+                                <a href="">AIR MAX</a>
+                                <a href="">最新款鞋</a>
+                            </p>
+                        </div>
+                        <div class="cateWrap">
+                            <h3 class="black">跑步运动</h3>
+                            <p class="context">
+                                <a href="">跑步鞋品</a>
+                                <a href="">BOOST</a>
+                                <a href="">ZOOM</a>
+                                <a href="">李宁云</a>
+                                <a href="">跑步鞋品</a>
+                                <a href="">BOOST</a>
+                                <a href="">ZOOM</a>
+                                <a href="">李宁云</a>
+                                <a href="">跑步鞋品</a>
+                                <a href="">BOOST</a>
+                                <a href="">ZOOM</a>
+                                <a href="">李宁云</a>
+                                <a href="">跑步鞋品</a>
+                                <a href="">BOOST</a>
+                                <a href="">ZOOM</a>
+                                <a href="">李宁云</a>
+                            </p>
+                        </div>
+                        <div class="cateWrap">
+                            <h3 class="black">球类运动</h3>
+                            <p class="context">
+                                <a href="">篮球系列</a>
+                                <a href="">球鞋</a>
+                                <a href="">背心</a>
+                                <a href="">篮球系列</a>
+                                <a href="">球鞋</a>
+                                <a href="">背心</a>
+                                <a href="">篮球系列</a>
+                                <a href="">球鞋</a>
+                                <a href="">背心</a>
+                                <a href="">篮球系列</a>
+                                <a href="">球鞋</a>
+                                <a href="">背心</a>
+                            </p>
+                        </div>
+                        <div class="cateWrap">
+                            <h3 class="black">瑜伽/游泳/健身</h3>
+                            <p class="context">
+                                <a href="">紧身衣</a>
+                                <a href="">胸衣</a>
+                                <a href="">运动长裤</a>
+                                <a href="">紧身衣</a>
+                                <a href="">胸衣</a>
+                                <a href="">运动长裤</a>
+                                <a href="">紧身衣</a>
+                                <a href="">胸衣</a>
+                                <a href="">运动长裤</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="columCon">
+                        <h3>品牌导购</h3>
+                        <img src="../img/d8a83e754cfbf3ee13aa7db623f30811.jpg" alt="">    
+                    </div>
+                </div>
+            </div>
+            <!-- 休闲服饰 -->
+            <div class="navSub jsLei">
+                <div class="Mark"></div>
+                <div class="mainBox">
+                    <div class="columCon">
+                        <h3>精品服饰</h3>
+                        <div class="cateWrap">
+                            <h3 class="black">男装</h3>
+                            <p class="context">
+                                <a href="">男衬衫</a>
+                                <a href="">男T恤</a>
+                                <a href="">男POLO</a>
+                                <a href="">男卫衣</a>
+                                <a href="">男衬衫</a>
+                                <a href="">男T恤</a>
+                                <a href="">男POLO</a>
+                                <a href="">男卫衣</a>
+                                <a href="">男衬衫</a>
+                                <a href="">男T恤</a>
+                                
+                            </p>
+                        </div>
+                        <div class="cateWrap">
+                            <h3 class="black">女装</h3>
+                            <p class="context">
+                                <a href="">女T恤</a>
+                                <a href="">女衬衫</a>
+                                <a href="">女针织衫</a>
+                                <a href="">女毛衣</a>
+                                <a href="">女外套</a>
+                                <a href="">女大衣</a>
+                                <a href="">女西服</a>
+                                <a href="">女毛衣</a>
+                                <a href="">女外套</a>
+                                <a href="">女大衣</a>
+                                <a href="">女西服</a>                                
+                            </p>
+                        </div>
+                        <div class="cateWrap">
+                            <h3 class="black">户外</h3>
+                            <p class="context">
+                                <a href="">T恤</a>
+                                <a href="">POLO衫</a>
+                                <a href="">衬衫</a>
+                                <a href="">冲锋衣</a>
+                                <a href="">夹克外套</a>
+                                <a href="">卫衣</a>
+                                <a href="">皮肤衣</a>
+                                <a href="">三合一</a>
+                                <a href="">休闲服</a>
+                                <a href="">冲锋裤</a>                               
+                            </p>
+                        </div>
+                    </div>
+                    <div class="columCon">
+                        <h3>鞋靴包配</h3>
+                        <div class="cateWrap">
+                            <h3 class="black">鞋靴</h3>
+                            <p class="context">
+                                <a href="">休闲鞋</a>
+                                <a href="">凉鞋</a>
+                                <a href="">涉溪鞋</a>
+                                <a href="">徒步鞋</a>
+                                <a href="">休闲鞋</a>
+                                <a href="">凉鞋</a>
+                                <a href="">涉溪鞋</a>
+                                <a href="">徒步鞋</a>
+                                <a href="">休闲鞋</a>
+                                <a href="">凉鞋</a>
+                                <a href="">涉溪鞋</a>
+                                <a href="">徒步鞋</a>
+                            </p>
+                        </div>
+                        <div class="cateWrap">
+                            <h3 class="black">包配</h3>
+                            <p class="context">
+                                <a href="">户外包</a>
+                                <a href="">休闲包</a>
+                                <a href="">户外包</a>
+                                <a href="">休闲包</a>
+                                <a href="">户外包</a>
+                                <a href="">休闲包</a>
+                                <a href="">户外包</a>
+                                <a href="">休闲包</a>
+                            </p>
+                        </div>
+                        <div class="cateWrap">
+                            <h3 class="black">家居</h3>
+                            <p class="context">
+                                <a href="">袜子</a>
+                                <a href="">文胸</a>
+                                <a href="">袜子</a>
+                                <a href="">文胸</a>
+                                <a href="">袜子</a>
+                                <a href="">文胸</a>                                                       
+                            </p>
+                        </div>
+                    </div>
+                    <div class="columCon">
+                        <h3>品牌导购</h3>
+                        <img src="../img/9b75f16a744a09ba56243a2db071eb05.jpg" alt="">    
+                    </div>
+                </div>
+            </div>
+            <!-- 男女名鞋 -->
+            <div class="navSub jsShoes">
+                <div class="Mark"></div>
+                <div class="mainBox">
+                    <div class="columCon">
+                        <h3>男鞋</h3>
+                        <div class="cateWrap">
+                            <h3 class="black">春秋鞋</h3>
+                            <p class="context">
+                                <a href="">休闲鞋</a>
+                                <a href="">休闲鞋</a>
+                                <a href="">休闲鞋</a>
+                                <a href="">休闲鞋</a>
+                                <a href="">休闲鞋</a>
+                                <a href="">休闲鞋</a>
+                                <a href="">休闲鞋</a>
+                                <a href="">休闲鞋</a>
+                                <a href="">休闲鞋</a>
+                                <a href="">休闲鞋</a>
+                                <a href="">休闲鞋</a>
+                                <a href="">休闲鞋</a>
+                                <a href="">休闲鞋</a>
+                                <a href="">休闲鞋</a>
+                                <a href="">休闲鞋</a>
+                            </p>
+                        </div>
+                        <div class="cateWrap">
+                            <h3 class="black">夏季款</h3>
+                            <p class="context">
+                                <a href="">洞洞鞋</a>
+                                <a href="">洞洞鞋</a>
+                                <a href="">洞洞鞋</a>
+                                <a href="">洞洞鞋</a>
+                                <a href="">洞洞鞋</a>
+                                <a href="">洞洞鞋</a>                             
+                            </p>
+                        </div>
+                        <div class="cateWrap">
+                            <h3 class="black">冬季款</h3>
+                            <p class="context">
+                                <a href="">休闲鞋</a>
+                                <a href="">休闲鞋</a>
+                                <a href="">休闲鞋</a>
+                                <a href="">休闲鞋</a>
+                                <a href="">休闲鞋</a>
+                                <a href="">休闲鞋</a>
+                                <a href="">休闲鞋</a>
+                                <a href="">休闲鞋</a>                            
+                            </p>
+                        </div>
+                    </div>
+                    <div class="columCon">
+                        <h3>女鞋</h3>
+                        <div class="cateWrap">
+                            <h3 class="black">春秋款</h3>
+                            <p class="context">
+                                <a href="">休闲鞋</a>
+                                <a href="">休闲鞋</a>
+                                <a href="">休闲鞋</a>
+                                <a href="">休闲鞋</a>
+                                <a href="">休闲鞋</a>
+                                <a href="">休闲鞋</a>
+                                <a href="">休闲鞋</a>
+                                <a href="">休闲鞋</a>
+                                <a href="">休闲鞋</a>
+                                <a href="">休闲鞋</a>
+                                <a href="">休闲鞋</a>
+                                <a href="">休闲鞋</a>
+                                <a href="">休闲鞋</a>
+                                <a href="">休闲鞋</a>
+                                <a href="">休闲鞋</a>
+                                <a href="">休闲鞋</a>
+                            </p>
+                        </div>
+                        <div class="cateWrap">
+                            <h3 class="black">夏季款</h3>
+                            <p class="context">
+                                <a href="">全凉鞋</a>
+                                <a href="">全凉鞋</a>
+                                <a href="">全凉鞋</a>
+                                <a href="">全凉鞋</a>
+                                <a href="">全凉鞋</a>
+                                <a href="">全凉鞋</a>
+                                <a href="">全凉鞋</a>
+                            </p>
+                        </div>
+                        <div class="cateWrap">
+                            <h3 class="black">冬季款</h3>
+                            <p class="context">
+                                <a href="">短靴</a>
+                                <a href="">短靴</a>
+                                <a href="">短靴</a>
+                                <a href="">短靴</a>
+                                <a href="">短靴</a>
+                                <a href="">短靴</a>
+                                <a href="">短靴</a>                                                     
+                            </p>
+                        </div>
+                    </div>
+                    <div class="columCon">
+                        <h3>品牌导购</h3>
+                        <img src="../img/23aa0615470ea7670dfc0bd8297fd336.jpg" alt="">    
+                    </div>
+                </div>
+            </div>
+            <!-- 全球购 -->
+            <div class="navSub jsGloab">
+                <div class="Mark"></div>
+                <div class="mainBox">
+                    <div class="columCon">
+                        <h3>常用</h3>
+                        <div class="cateWrap">                            
+                            <p class="context">
+                                <a href="">查看全部</a>
+                                <a href="">查看全部</a>
+                                <a href="">查看全部</a>
+                                <a href="">查看全部</a>
+                                <a href="">查看全部</a>
+                                <a href="">查看全部</a>
+                            </p>
+                        </div>
+                        <div class="cateWrap">
+                            <h3 class="black">潮牌</h3>
+                            <p class="context">
+                                <a href="">ASSC</a>
+                                <a href="">ASSC</a>
+                                <a href="">ASSC</a>
+                                <a href="">ASSC</a>
+                                <a href="">ASSC</a>
+                                <a href="">ASSC</a>
+                                <a href="">ASSC</a>                            
+                            </p>
+                        </div>
+                        <div class="cateWrap">
+                            <h3 class="black">服饰</h3>
+                            <p class="context">
+                                <a href="">T恤</a>
+                                <a href="">T恤</a>
+                                <a href="">T恤</a>
+                                <a href="">T恤</a>
+                                <a href="">T恤</a>
+                                <a href="">T恤</a>
+                                <a href="">T恤</a>
+                                <a href="">T恤</a>
+                                <a href="">T恤</a>
+                                <a href="">T恤</a>
+                                <a href="">T恤</a>
+                                <a href="">T恤</a>
+                                <a href="">T恤</a>
+                                <a href="">T恤</a>
+                                <a href="">T恤</a>
+                                <a href="">T恤</a>                         
+                            </p>
+                        </div>
+                        <div class="cateWrap">
+                            <h3 class="black">短靴</h3>
+                            <p class="context">
+                                <a href="">Air Jordan</a>
+                                <a href="">Air Jordan</a>
+                                <a href="">Air Jordan</a>
+                                <a href="">Air Jordan</a>
+                                <a href="">Air Jordan</a>
+                                <a href="">Air Jordan</a>
+                                <a href="">Air Jordan</a>
+                                <a href="">Air Jordan</a>
+                                <a href="">Air Jordan</a>
+                                <a href="">Air Jordan</a>
+                                <a href="">Air Jordan</a>
+                                <a href="">Air Jordan</a>
+                                <a href="">Air Jordan</a>
+                                <a href="">Air Jordan</a>
+                                <a href="">Air Jordan</a>
+                                <a href="">Air Jordan</a>
+                                <a href="">Air Jordan</a>
+                                <a href="">Air Jordan</a>
+                                <a href="">Air Jordan</a>
+                                <a href="">Air Jordan</a>
+                                <a href="">Air Jordan</a>                       
+                            </p>
+                        </div>
+                        <div class="cateWrap">
+                            <h3 class="black">包袋</h3>
+                            <p class="context">
+                                <a href="">女包</a>
+                                <a href="">女包</a>
+                                <a href="">女包</a>
+                                <a href="">女包</a>
+                                <a href="">女包</a>
+                                <a href="">女包</a>                            
+                            </p>
+                        </div>                        
+                    </div>                   
+                    <div class="columCon">
+                        <h3>活动</h3>
+                        <img src="../img/3b22ba32b7ddf5f650c0075ff5ed0ca8.png" alt="">    
+                    </div>
+                    <div class="columCon">
+                        <h3>品牌</h3>
+                        <img src="../img/95c942d989bce3464447c4654c7a1c7f.jpg" alt="">    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 购物车 -->
+    <div class="section">
+        <div class="secTitle">
+            <h1>我的购物车</h1>
+        </div>
+        <div class="secDialog">
+            <!-- 登录部分 -->
+            <div class="logBox">
+                <p>您还没有登录！登录后购物车的商品将保存到您的账号中</p>
+                <a href="login.html">登录</a>
+            </div>
+            <!-- 购物车商品部分 -->
+            <div class="cartBox">
+                <ul>
+                    <li class="tit">
+                        <span class="checkAllBox"></span>
+                        <span>全选</span>
+                    </li>
+                    <li class="tit">
+                        <span>商品名称</span>
+                    </li>
+                    <li class="tit">
+                        <span>单价</span>
+                    </li>
+                    <li class="tit">
+                        <span>数量</span>
+                    </li>
+                    <li class="tit">
+                        <span>小计</span>
+                    </li>
+                    <li class="tit">
+                        <span>操作</span>
+                    </li>
+                </ul>
+                <table>
+                    <tr class="active">
+                        <td width="110px"></td>
+                        <td colspan="5">
+                            <span>满折</span>
+                            匡威&万斯 下单9折,您已享受此活动.		
+                        </td>
+                    </tr>
+                </table>
+                
+            </div>
+        </div>
+    </div>
+    <!-- 结算部分 -->
+    
+    <table class="total">
+        <tr>
+            <td width="110px">
+                <span class="checkAllBox"></span>
+                <span>全选</span>
+            </td>
+            <td width="300px">
+                <a href="">删除所选产品</a>                
+            </td>
+            <td width="140px" class="countSp">
+                商品数量:
+                <span>0</span>
+            </td>
+            <td width="140px" class="countSp">
+                商品金额:￥
+                <span>0</span>
+            </td>
+            <td width="130px" class="countSp">
+                活动优惠：￥
+                <span>0</span>
+            </td>
+            <td width="220px" class="countSp">
+                合计（不含运费）：￥
+                <span>0</span>
+            </td>
+            <td width="160px" class="btn">
+                <input type="button" value="去结算">
+            </td>
+        </tr>
+    </table>           
+    
+    <!-- 底部	 -->
+    <div class="footer">
+        <div class="box">
+            <div class="leftCode">
+                <div class="clientCode">
+                    <img src="../img/code_client.png" alt="">
+                    <p>好乐买手机客户端</p>
+                </div>
+                <div class="weixinCode">
+                    <img src="../img/code_public.jpg" alt="">
+                    <p>好乐买微信公众号</p>
+                </div>
+            </div>
+            <ul class="rightList">
+                <li>
+                    <p>购物指南</p>
+                    <a href="">购物流程</a>
+                    <a href="">订购方式</a>
+                    <a href="">常见问题</a>
+                    <a href="">隐私政策</a>
+                </li>
+                <li>
+                    <p>配送方式</p>
+                    <a href="">快递配送</a>
+                    <a href="">配送时间</a>
+                </li>
+                <li>
+                    <p>支付方式</p>
+                    <a href="">支付方式</a>
+                    <a href="">代金券</a>
+                </li>
+                <li>
+                    <p>售后服务</p>
+                    <a href="">退换货政策</a>
+                    <a href="">退款说明</a>
+                    <a href="">联系客服</a>
+                </li>
+            </ul>
+        </div>
+        <p class="center">
+            <a href="">
+                <img src="../img/okbuy1-03.png" alt="">
+            </a>
+            <a href="">
+                <img src="../img/okbuy1-05.png" alt="">
+            </a>
+            <a href="">
+                <img style="border:1px solid #ccc" src="../img/902c39b52902b3bd4ab500babad4e14a.png" alt="">
+            </a>
+            <a href="">
+                <img src="../img/bjwj.jpg" alt="">
+            </a>
+        </p>
+        <p class="aboutUs">
+            <a href="#">公司介绍</a> |
+            <a href="#">加入我们</a> |
+            <a href="#">联系我们</a> |
+            <a href="#">友情链接</a>
+        </p>
+        <div class="bt">
+            天津好乐买信息技术有限公司 Copyright © 2007-2018 OkBuy.com All Rights Reserved
+            <a href="#">津ICP备16005872号-1</a>  京公网安备110105006859   客服电话：400-8610-400
+        </div>
+    </div>
+    <div id="gotoTop">
+        <a href="#"></a>
+        <a href=""></a>
+    </div>
+</body>
+
+</html>
+<script type="text/javascript" src="../js/cookieTools.js"></script>
+<script type="text/javascript" src="../js/tab.js"></script>
+<script type="text/javascript" src="../js/jQuery-1.8.3.js"></script>
+<script type="text/javascript">
+
+
+$(function(){
+    showMenu("topInf");
+    showSub("hasSub","navSub");
+
+// --------------------------------获取用户名cookie----------------------------
+let user = getCookie("username");
+        
+    if(user != null){
+        var  userId= JSON.parse(user);
+        document.getElementById("unlogin").style.display = "none";
+        document.getElementById("alreadylogin").style.display = "inline-block";
+        document.getElementById("alreadylogin").firstElementChild.innerHTML = userId.userName;
+        let cancelSpan = document.getElementById("alreadylogin").lastElementChild;
+        cancelSpan.innerHTML = "注销";
+        cancelSpan.onclick = function(){
+        removeCookie("username");
+        }
+        $(".logBox").css({"display":"none"});
+    }else{
+        document.getElementById("unlogin").style.display = "inline-block";
+        document.getElementById("alreadylogin").style.display = "none";
+    }
+// ---------------------------获取购物车信息---------------------------------------
+$.ajax({
+    type:'post',
+    url:'../php/getShoppingCart.php',
+    dataType:"json",
+    async:false,
+    data:{vipName:userId.userName},
+    success:function(data){
+        // console.log(data);
+        // console.log(typeof(data));
+        let str = "";
+        let goodsIdData;
+        $.each(data,function(i,n){
+            // console.log(i);
+            // console.log(n);
+            // console.log($(this).n.goodsId);
+            str += `<tr>
+                        <td>
+                            <span class="checkBox"></span>
+                        </td>
+                        <td>
+                            <a href="">
+                                <img src="${n.beiyong10}" alt=""/>
+                                <i>${n.goodsDesc}${n.goodsType}</i>
+                                <br/>
+                                <span>尺码：175</span>
+                            </a>
+                        </td>
+                        <td>
+                            ￥<span>${n.goodsPrice}</span>  
+                        </td>
+                        <td>
+                            <ul class="countBox">
+                                <li>
+                                    <span class="reduce">-</span>
+                                </li>
+                                <li>
+                                    <input type="text" value="${n.goodsCount}" class="count"/>
+                                </li>
+                                <li>
+                                    <span class="add">+</span>
+                                </li>
+                            </ul>
+                            <p >库存仅剩1件</p>
+                        </td>
+                        <td class="price">
+                            ￥<span>399</span>
+                        </td>
+                        <td class="de">
+                            <span class="wish">
+                                <i>收藏</i>
+                            </span>
+                            <span class="delete">
+                                <i>删除</i>
+                            </span>
+                            <div class="deleteBox">
+                                <span class="deleteMark"></span>
+                                <span class="deleteMark_"></span>
+                                <p>确定要删除该商品吗？</p>
+                                <span class="sure">确定</span>
+                                <span class="cancel">取消</span>
+                            </div>
+                        </td>
+                    </tr>`
+           
+            
+        })
+        $(".active").after(str);
+
+ //-------------------------------------------------------------------------------------------
+        // 一、增加数量
+        $(".add").click(function(){
+            //  改数量
+            let count= parseInt($(this).parent().prev().children().val());
+            count++;
+            $(this).parent().prev().children().val(count);
+            //  改变金额
+            let price = parseFloat($(this).parent().parent().parent().prev().children().text());//获得单价
+            //  console.log(price);
+            let money =price*count;
+            $(this).parent().parent().parent().next().children().text(money);
+            totalMoney();
+        })
+        // 二、减少数量
+        $(".reduce").click(function(){
+            // 改数量
+            let count = parseInt($(this).parent().next().children().val());
+            count--;
+            if(count<0){
+                return;
+            }
+            // console.log(count);
+            $(this).parent().next().children().val(count);
+            // 改金额
+            let price = parseFloat($(this).parent().parent().parent().prev().children().text());//获得单价
+            let money = price*count;
+            $(this).parent().parent().parent().next().children().text(money);
+            totalMoney();
+        })
+
+        function totalMoney(){
+            // 商品数量
+            let totalCou = 0;
+            $(".count").each(function(){
+                let counts = parseInt($(this).val());
+                totalCou +=counts;
+            })
+            $(".countSp:eq(0)").children().html(totalCou);
+            // 商品金额合计
+            let totalMon =0;
+            $(".price").each(function(){
+                let moneys =parseFloat($(this).children().html());
+                // console.log(moneys);
+                totalMon +=moneys;
+            })
+            $(".countSp:eq(1)").children().html(totalMon.toFixed(2));
+            // 活动优惠
+            let free = parseFloat($(".countSp:eq(2)").children().html());
+            // 结算金额
+            let money = 0;
+            money = totalMon - free;
+            $(".countSp:eq(3)").children().html(money);
+        }
+        totalMoney();   
+        
+// -----------------------删除商品-------------------------------------------------
+        var timer;
+        $(".delete").click(function(){
+            $(this).next().show();
+            timer=setTimeout(()=>{
+                    $(this).next().hide();
+                },2000)
+        })
+        $(".cancel").click(function(){
+            $(this).parent().hide();
+            clearTimeout(timer);
+        })
+
+        $(".sure").click(function(){
+            $(this).parent().parent().parent().remove();
+            clearTimeout(timer);
+            alert("删除成功");
+// -------------------------删除接口连接--------------------------------------
+            $.ajax({
+                type:'post',
+                url:'../php/deleteGoods.php',
+                dataType:'json',
+                data:{vipName:userId.userName,goodsId:goodsIdData},
+                async:false,
+                success:function(data){
+                    console.log(data);
+                    console.log(typeof(data));
+                }
+            })
+        })
+
+    },
+    error:function(data){
+        console.log(data);
+    }
+})
+//--------------------------------------------------------------------------
+//点选框
+jQuery.fn.extend({
+	guanlianCheck:function($child){
+		let $parent = this;
+		//1、父控制子的选择
+		//this：调用此函数的对象（jQuery对象），
+		this.toggle(
+            function(){            
+                $(this).css("background-position","-20px 0");//此this是事件源，是DOM对象
+                $child.each(function(){
+                    //此this是$child里的每一个DOM元素；
+                    $(this).css("background-position","-20px 0"); 
+                });
+            },
+            function(){
+                $(this).css("background-position","0 0");//此this是事件源，是DOM对象
+                $child.each(function(){
+                    //此this是$child里的每一个DOM元素；
+                    $(this).css("background-position","0 0"); 
+                });
+            }
+        );	
+		
+        // 2、子控制父的选择
+        let hasImg = true;
+        
+		$child.toggle(
+            function(){
+                $(this).css("background-position","-20px 0");
+                
+                // 1）、循环所有的子chckbox，             
+                $child.each(function(){
+                    // console.log($(this).attr("background-position"));
+                    if($(this).prop("background-position")=="0 0"){
+                        hasImg = false;
+                    }
+                });
+                // $parent.css("background-position","-20px 0"); 
+                if(!hasImg){
+                    $parent.css("background-position","0px 0");
+                }else{
+                    $parent.css("background-position","-20px 0");
+                }           
+            },
+            function(){
+                $(this).css("background-position","0px 0");
+                
+                // 1）、循环所有的子chckbox，             
+                $child.each(function(){
+                    if($(this).prop("background-position")=="0 0"){
+                        hasImg = false;
+                    } 
+                });
+                // $parent.css("background-position","-20px 0");
+                if(!hasImg){
+                    $parent.css("background-position","0px 0");
+                }else{
+                    $parent.css("background-position","-20px 0");
+                }
+            }
+        )
+        
+    }	
+});
+
+
+$(".checkAllBox").guanlianCheck($(".checkBox"));
+   
+
+// -----------------------结算框浮动--------------------------------------------------------
+let account = $("table tr:last");
+
+// 获取结算框到浏览器顶端的距离,结算框脱离文档流后offsettop值改变
+//改成获取购物车中最后一个元素的offsettop;
+let accouDis = account.offset().top;//元素距离document顶部的距离
+// console.log(accouDis);
+let num = $(document).height()-accouDis-account.height();//元素距离底部的距离
+// console.log(num);//455
+let screenDis = $(window).height()-num;
+// console.log(screenDis);
+
+// 监控滚动栏scroll
+$(document).scroll(function(){ 
+    let disScro = $(window).scrollTop();//滚动进去的距离
+    // console.log(disScro);  
+    let Dis = accouDis - disScro;//元素距离可视页面顶部的距离
+    // console.log(sreenDis); 
+    if((accouDis-disScro-account.height()) > screenDis ){    
+        $(".total").css({"position":"fixed","bottom":"0","width":"100%","box-shadow":"0px -3px 2px #999"});
+    }else{
+        $(".total").css({"position":"static","width":"1200px","box-shadow":"0 0 0"});
+    }
+})
+
+    
+//---------------------------------------------------------------------------------------------
+ 
+
+
+
+})
+    
+    
+</script>
